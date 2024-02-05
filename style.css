@@ -1,0 +1,95 @@
+body {
+    background-color: #D0E8F2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.center-rectangle {
+    background-color: #E6F2FA; /* Lighter shade of blue */
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh; /* This makes the div span the full height of the viewport */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+    border-radius: 20px; /* Adjust the value to control the roundness of the corners */
+}
+
+header, main, footer {
+    margin: auto;
+    max-width: 800px;
+}
+
+main {
+    position: relative; /* Required for absolute positioning of child elements */
+    text-align: center; /* Center the content horizontally */
+    padding: 20px; /* Add some padding to the content */
+}
+
+.start_text {
+    position: absolute;
+    top: 35px;
+    left: -150px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.topic::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px; /* Adjust the line thickness as needed */
+    background-color: rgba(0, 123, 255, 0.6); /* Line color */
+}
+.topic::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px; /* Adjust the line thickness as needed */
+    background-color: rgba(0, 123, 255, 0.6); /* Line color */
+}
+
+.topic::before {
+    left: 0px;
+    top: 25px; /* Position above the text */
+}
+
+.topic::after {
+    left: 0px;
+    bottom: 25px; /* Position below the text */
+}
+
+.topic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    margin: 0;
+    color: gray;
+}
+
+.topic p:hover {
+    color: #007bff; /* Change text color on hover */
+    transform: scale(1.1); /* Scale the text on hover */
+    transition: color 0.3s ease, transform 0.3s ease; /* Add smooth transition */
+}
+
+.description {
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    left: 0px;
+    max-width: 600px;
+
+}
+
+.profile-picture {
+    position: absolute;
+    top: 100px; /* Adjust the top position as needed */
+    right: -100px; /* Adjust the right position as needed */
+    max-width: 200px; /* Set the maximum width for your image */
+    border-radius: 5%; /* To make the image circular */
+}
+
+/* Add more styling as per your requirement */
