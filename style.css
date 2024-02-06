@@ -9,7 +9,7 @@ body {
     background-color: #E6F2FA; /* Lighter shade of blue */
     width: 80%;
     margin: 0 auto;
-    height: 100vh; /* This makes the div span the full height of the viewport */
+    height: 500vh; /* This makes the div span the full height of the viewport */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
     border-radius: 20px; /* Adjust the value to control the roundness of the corners */
 }
@@ -80,7 +80,7 @@ main {
     text-align: left;
     top: 0px;
     left: 0px;
-    max-width: 600px;
+    max-width: 630px;
 
 }
 
@@ -92,4 +92,13 @@ main {
     border-radius: 5%; /* To make the image circular */
 }
 
+
+a {
+    color: #007bff; /* Link color */
+    text-decoration: underline; /* Underline the link text */
+}
+
+a:hover {
+    color: #0056b3; /* Link color on hover */
+}
 /* Add more styling as per your requirement */
