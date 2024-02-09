@@ -92,6 +92,18 @@ main {
     border-radius: 5%; /* To make the image circular */
 }
 
+.contact-me {
+    position: absolute;
+    top: 380px;
+    left: 700px;
+    right: -500px;
+    max-width: 500px;
+    font-size: 15px;
+    text-align: left;
+    font-family: Arial, serif;
+    color: gray;
+}
+
 
 a {
     color: #007bff; /* Link color */
