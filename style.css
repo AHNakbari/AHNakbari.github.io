@@ -9,7 +9,7 @@ body {
     background-color: #E6F2FA; /* Lighter shade of blue */
     width: 80%;
     margin: 0 auto;
-    height: 500vh; /* This makes the div span the full height of the viewport */
+    height: 330vh; /* This makes the div span the full height of the viewport */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
     border-radius: 20px; /* Adjust the value to control the roundness of the corners */
 }
