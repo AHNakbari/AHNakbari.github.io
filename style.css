@@ -6,111 +6,97 @@ body {
 }
 
 .center-rectangle {
-    background-color: #E6F2FA; /* Lighter shade of blue */
+    background-color: #E6F2FA;
     width: 80%;
     margin: 0 auto;
-    height: 330vh; /* This makes the div span the full height of the viewport */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
-    border-radius: 20px; /* Adjust the value to control the roundness of the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px; /* Add padding to prevent content from touching the edges */
 }
 
 header, main, footer {
-    margin: auto;
     max-width: 800px;
+    margin: auto;
+    padding: 20px 0; /* Added padding for spacing */
 }
 
+/* Updated main for better responsiveness */
 main {
-    position: relative; /* Required for absolute positioning of child elements */
-    text-align: center; /* Center the content horizontally */
-    padding: 20px; /* Add some padding to the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.start_text {
-    position: absolute;
-    top: 35px;
-    left: -150px;
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    margin: 0;
+.start_text, .topic, .description, .contact-me {
+    text-align: center;
+    margin-bottom: 20px; /* Added margin for spacing between sections */
 }
 
-.topic::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px; /* Adjust the line thickness as needed */
-    background-color: rgba(0, 123, 255, 0.6); /* Line color */
-}
-.topic::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1.5px; /* Adjust the line thickness as needed */
-    background-color: rgba(0, 123, 255, 0.6); /* Line color */
-}
-
-.topic::before {
-    left: 0px;
-    top: 25px; /* Position above the text */
-}
-
-.topic::after {
-    left: 0px;
-    bottom: 25px; /* Position below the text */
-}
-
-.topic {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    margin: 0;
+.topic p {
     color: gray;
+    font-size: 30px;
+    margin: 20px 0;
 }
+
+/*.topic::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 1px; !* Adjust the line thickness as needed *!*/
+/*    background-color: rgba(0, 123, 255, 0.6); !* Line color *!*/
+/*}*/
+/*.topic::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 1.5px; !* Adjust the line thickness as needed *!*/
+/*    background-color: rgba(0, 123, 255, 0.6); !* Line color *!*/
+/*}*/
 
 .topic p:hover {
-    color: #007bff; /* Change text color on hover */
-    transform: scale(1.1); /* Scale the text on hover */
-    transition: color 0.3s ease, transform 0.3s ease; /* Add smooth transition */
-}
-
-.description {
-    position: absolute;
-    text-align: left;
-    top: 0px;
-    left: 0px;
-    max-width: 630px;
-
+    color: #007bff;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .profile-picture {
-    position: absolute;
-    top: 150px; /* Adjust the top position as needed */
-    right: -100px; /* Adjust the right position as needed */
-    max-width: 200px; /* Set the maximum width for your image */
-    border-radius: 5%; /* To make the image circular */
+    max-width: 200px;
+    border-radius: 5%;
+    margin: 20px 0; /* Adjust margin as needed */
 }
 
 .contact-me {
-    position: absolute;
-    top: 380px;
-    left: 700px;
-    right: -500px;
-    max-width: 500px;
     font-size: 15px;
-    text-align: left;
-    font-family: Arial, serif;
     color: gray;
 }
 
-
 a {
-    color: #007bff; /* Link color */
-    text-decoration: underline; /* Underline the link text */
+    color: #007bff;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: #0056b3; /* Link color on hover */
+    color: #0056b3;
 }
-/* Add more styling as per your requirement */
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .center-rectangle {
+        width: 95%; /* Increase width for smaller screens */
+        margin: 20px auto;
+    }
+
+    header, main, footer {
+        max-width: none;
+        padding: 10px;
+    }
+
+    .topic, .description, .contact-me {
+        text-align: center;
+        margin: 10px; /* Adjust margins for smaller screens */
+    }
+
+    .profile-picture {
+        max-width: 150px; /* Adjust image size for smaller screens */
+    }
+}
